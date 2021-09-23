@@ -15,6 +15,13 @@ import { ProductUpdateComponent } from './products/product-update/product-update
 import { ProductsComponent } from './products/products.component';
 import { HomeComponent } from './home/home.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { OneWayComponent } from './data/one-way/one-way.component';
+import { TwoWayComponent } from './data/two-way/two-way.component';
+import { StyleBindingComponent } from './data/style-binding/style-binding.component';
+import { EventBindingComponent } from './data/event-binding/event-binding.component';
+import { FormsModule } from '@angular/forms';
+import { TemplateFormComponent } from './forms/template-form/template-form.component';
+import { ReactiveFormComponent } from './forms/reactive-form/reactive-form.component';
 
 @NgModule({
   declarations: [
@@ -30,11 +37,18 @@ import { NotFoundComponent } from './not-found/not-found.component';
     ProductUpdateComponent,
     ProductsComponent,
     HomeComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    OneWayComponent,
+    TwoWayComponent,
+    StyleBindingComponent,
+    EventBindingComponent,
+    TemplateFormComponent,
+    ReactiveFormComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,17 @@
+.bg-one{
+    background-color: cadetblue;
+    padding: 20px;
+    border: 2px solid red;
+}
+
+.bg-two{
+    background-color: cyan;
+    padding: 10px;
+    border: 2px solid green;
+}
+
+.bg-three{
+    background-color: chartreuse;
+    padding: 10px;
+    border: 2px solid black;
+}

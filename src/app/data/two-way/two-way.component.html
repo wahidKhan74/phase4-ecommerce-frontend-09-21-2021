@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="alert alert-success" role="alert">
+                {{title}}
+            </div>
+            <div class="form-group">
+                <label for="title">Title </label>
+                <input type="title" class="form-control" id="title" aria-describedby="titleHelp" (input)="onInput($event)">
+            </div>
+
+            <div class="alert alert-warning" role="alert">
+                {{message}}
+            </div>
+            <div class="form-group">
+                <label for="title">Meesage </label>
+                <input type="title" class="form-control" id="title" aria-describedby="titleHelp" [(ngModel)]="message">
+            </div>
+        </div>
+    </div>
+</div>

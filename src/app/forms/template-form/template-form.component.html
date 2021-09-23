@@ -1,0 +1,120 @@
+<!-- Bootstrap Form with validation -->
+<div class="container form-container" [class]="'bg-one'">
+    <h1>Registration Form</h1>
+    <form #registerForm="ngForm">
+        <div class="form-row">
+            <!-- First Name -->
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label for="firstName">First Name</label>
+                    <input type="text" class="form-control" name="firstName" #firstName="ngModel"
+                        [(ngModel)]="user.firstName" id="firstName" aria-describedby="firstNameHelp" minlength="3"
+                        maxlength="15" required>
+                    <small *ngIf="hasError(firstName)" [class]="hasError(firstName) ? 'has-error' :''">
+                        <div *ngIf="firstName.errors">
+                            <span *ngIf="firstName.errors.required">First Name is a required field</span>
+                            <span *ngIf="firstName.errors.minlength">First Name is a min 3 char long field</span>
+                            <span *ngIf="firstName.errors.maxlength">First Name is a max 15 char long field</span>
+                        </div>
+                    </small>
+                </div>
+            </div>
+            <!-- Last Name -->
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label for="lastName">Last Name</label>
+                    <input type="text" class="form-control" name="lastName" #lastName="ngModel"
+                        [(ngModel)]="user.lastName" id="lastName" aria-describedby="lastNameHelp" minlength="3"
+                        maxlength="15" required>
+                    <small *ngIf="hasError(lastName)" [class]="hasError(lastName) ? 'has-error' :''">
+                        <div *ngIf="lastName.errors">
+                            <span *ngIf="lastName.errors.required">Last Name is a required field</span>
+                            <span *ngIf="lastName.errors.minlength">Last Name is a min 3 char long field</span>
+                            <span *ngIf="lastName.errors.maxlength">Last Name is a max 15 char long field</span>
+                        </div>
+                    </small>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <!-- Email -->
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label for="email">Email address</label>
+                    <input type="email" class="form-control" name="email" #email="ngModel" [(ngModel)]="user.email"
+                        id="email" aria-describedby="emailHelp" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" >
+                        <small *ngIf="hasError(email)" [class]="hasError(email) ? 'has-error' :''"   >
+                            <div *ngIf="email.errors">
+                                <span *ngIf="email.errors.required">Email is a required field</span>
+                                <span *ngIf="email.errors.pattern">Email is a not a valid email</span>
+                            </div>
+                          </small>
+                </div>
+            </div>
+            <!-- Password -->
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control" name="password" #password="ngModel"
+                        [(ngModel)]="user.password" id="password" aria-describedby="passwordHelp" minlength="6"
+                        maxlength="15" required>
+                        <small *ngIf="hasError(password)" [class]="hasError(password) ? 'has-error' :''">
+                            <div *ngIf="password.errors">
+                                <span *ngIf="password.errors.required">Password is a required field</span>
+                                <span *ngIf="password.errors.minlength">Password is a min 6 char long field</span>
+                                <span *ngIf="password.errors.maxlength">Password is a max 16 char long field</span>
+                            </div>
+                          </small>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group col-sm-6">
+                <label for="inputState">State</label>
+                <select id="inputState" name="state" class="form-control" #state="ngModel" [(ngModel)]="user.state"
+                    required>
+                    <option value="NY">New York</option>
+                    <option value="TX">Texas</option>
+                    <option value="CA">California</option>
+                    <option value="HW">Hawaii</option>
+                </select>
+                <small *ngIf="hasError(state)" [class]="hasError(state) ? 'has-error' :''"   >
+                    <div *ngIf="state.errors">
+                        <span *ngIf="state.errors.required">State is a required field</span>
+                    </div>
+                  </small>
+            </div>
+            <div class="form-group col-sm-6">
+                <label for="inputZip">Zip</label>
+                <input type="number" class="form-control" id="zipcode" name="zipcode" #zipcode="ngModel"
+                    [(ngModel)]="user.zipcode" required>
+                    <small *ngIf="hasError(zipcode)" [class]="hasError(zipcode) ? 'has-error' :''"   >
+                        <div *ngIf="zipcode.errors">
+                            <span *ngIf="zipcode.errors.required">zipcode is a required field</span>
+                        </div>
+                      </small>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group col-sm-6">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" #agree="ngModel" [(ngModel)]="user.agree"
+                        name="agree" id="agree" required>
+                    <label class="form-check-label" for="aggree">
+                        Please check the terms and conditions!
+                    </label>
+                    <small *ngIf="hasError(agree)" [class]="hasError(agree) ? 'has-error' :''"   >
+                        <div *ngIf="agree.errors">
+                            <span *ngIf="agree.errors.required">agree is a required field</span>
+                        </div>
+                      </small>
+                </div>
+            </div>
+        </div>
+
+        <button type="submit" class="btn btn-success btn-block" (click)="onSubmit(registerForm)">Submit</button>
+    </form>
+</div>

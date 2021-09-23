@@ -1,0 +1,48 @@
+<!-- Interpolation  -->
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6">
+            <h3>Interpolation : </h3>
+            <div class="alert alert-primary" role="alert">
+                Username : {{username}} - <strong>{{email}}</strong>
+            </div>
+            <div class="alert alert-secondary" role="alert">
+                User age : {{age}}
+            </div>
+            <div class="alert alert-success" role="alert">
+                User isMarried : {{isMarried}}
+            </div>
+            <div class="alert alert-danger" role="alert">
+                User Message : {{message}}
+            </div>
+            <div class="alert alert-warning" role="alert">
+                Product Details : {{product.id}} - {{product.name}} - {{product.price}} - {{product.isActive}} -
+                {{product.description}}
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <h3>Property Binding : </h3>
+            <div class="alert alert-primary" role="alert">
+                Username : <span [innerText]="username"></span> - <strong [innerText]="email"></strong>
+            </div>
+            <div class="alert alert-secondary" role="alert">
+                User age : <span [innerText]="age"></span>
+            </div>
+            <div class="alert alert-success" role="alert">
+                User isMarried : <span [innerText]="isMarried"></span>
+            </div>
+            <div class="alert alert-danger" role="alert">
+                User Message :<span [innerText]="message"></span>
+            </div>
+            <div class="alert alert-warning" role="alert">
+                Product Details :  <span [innerText]="product.id"></span>  - 
+                <span [innerText]="product.name"></span>  -
+                <span [innerText]="product.price"></span>  -
+                <span [innerText]="product.isActive"></span>  -
+                <span [innerText]="product.description"></span>  -
+            </div>
+        </div>
+    </div>
+
+</div>

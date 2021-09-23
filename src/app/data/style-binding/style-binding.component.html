@@ -1,0 +1,44 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6" [style.background-color]="color.YELLOW" [style.padding.px]="age">
+
+            <h3 [style.color]="'brown'">Style Binding : </h3>
+            <div class="alert alert-primary" role="alert">
+                Username : {{username}} - <strong>{{email}}</strong>
+            </div>
+            <div [style.font-size.px]="age" class="alert alert-secondary" role="alert">
+                User age : {{age}}
+            </div>
+            <div class="alert alert-success" role="alert">
+                User isMarried : {{isMarried}}
+            </div>
+            <div class="alert alert-danger" role="alert">
+                User Message : {{message}}
+            </div>
+            <div class="alert alert-warning" role="alert">
+                Product Details : {{product.id}} - {{product.name}} - {{product.price}} - {{product.isActive}} -
+                {{product.description}}
+            </div>
+
+        </div>
+        <div class="col-sm-6" [class]="'bg-one'">
+            <h3 [className]="'bg-two'">Class Binding : </h3>
+            <div class="alert alert-primary" role="alert">
+                Username : {{username}} - <strong>{{email}}</strong>
+            </div>
+            <div class="alert" [class]="age>30 ? 'alert-secondary' : 'alert-\info'" role="alert">
+                User age : {{age}}
+            </div>
+            <div class="alert alert-success" role="alert">
+                User isMarried : {{isMarried}}
+            </div>
+            <div class="alert alert-danger" role="alert">
+                User Message : {{message}}
+            </div>
+            <div class="alert alert-warning" role="alert" [class]="product.isActive ? 'bg-three' : 'bg-two'">
+                Product Details : {{product.id}} - {{product.name}} - {{product.price}} - {{product.isActive}} -
+                {{product.description}}
+            </div>
+        </div>
+    </div>
+</div>
