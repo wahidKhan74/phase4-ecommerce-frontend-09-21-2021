@@ -23,6 +23,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TemplateFormComponent } from './forms/template-form/template-form.component';
 import { ReactiveFormComponent } from './forms/reactive-form/reactive-form.component';
 import { DataService } from './service/data.service';
+import { HttpClientModule } from '@angular/common/http';
+import { ApiService } from './service/api.service';
 
 @NgModule({
   declarations: [
@@ -50,9 +52,10 @@ import { DataService } from './service/data.service';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
-  providers: [DataService],
+  providers: [DataService,ApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
