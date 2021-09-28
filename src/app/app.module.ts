@@ -22,6 +22,7 @@ import { EventBindingComponent } from './data/event-binding/event-binding.compon
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TemplateFormComponent } from './forms/template-form/template-form.component';
 import { ReactiveFormComponent } from './forms/reactive-form/reactive-form.component';
+import { DataService } from './service/data.service';
 
 @NgModule({
   declarations: [
@@ -51,7 +52,7 @@ import { ReactiveFormComponent } from './forms/reactive-form/reactive-form.compo
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
