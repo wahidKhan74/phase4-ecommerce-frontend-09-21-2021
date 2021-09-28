@@ -1,1 +1,14 @@
-<p>product-list works!</p>
+<div class="card-deck">
+    <div class="card" *ngFor="let p of products">
+      <img src="../../../assets/img/product.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">{{p.name}}</h5>
+        <p class="card-text">Details : {{p.description}}</p>
+        <p class="card-text">Price: {{p.price}}</p>
+      </div>
+      <div class="card-footer">
+        <small class="text-muted">Last updated 3 mins ago</small>
+        <a (click)="onDelete(p.id)" class="badge badge-danger">Delete</a>
+      </div>
+    </div>   
+  </div>
