@@ -19,7 +19,7 @@ import { OneWayComponent } from './data/one-way/one-way.component';
 import { TwoWayComponent } from './data/two-way/two-way.component';
 import { StyleBindingComponent } from './data/style-binding/style-binding.component';
 import { EventBindingComponent } from './data/event-binding/event-binding.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TemplateFormComponent } from './forms/template-form/template-form.component';
 import { ReactiveFormComponent } from './forms/reactive-form/reactive-form.component';
 
@@ -48,7 +48,8 @@ import { ReactiveFormComponent } from './forms/reactive-form/reactive-form.compo
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
