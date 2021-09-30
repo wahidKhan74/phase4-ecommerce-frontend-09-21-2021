@@ -18,6 +18,14 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
   }
 
+    public productItem :any = {
+      id: 10000111222,
+      name:"Mac book XYZ Series",
+      desc:"It is a Laptop",
+      rating: 4.97455,
+      price:889.95,
+      createdAt: new Date(),
+    }
 
 
 

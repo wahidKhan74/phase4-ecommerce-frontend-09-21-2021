@@ -19,7 +19,7 @@
  <!-- <app-style></app-style> -->
  <!-- <app-class></app-class> -->
 
- <div class="form-group">
+ <!-- <div class="form-group">
   <label for="email">Email address</label>
   <input type="email" class="form-control" id="email" aria-describedby="emailHelp" appInputformater>
   <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
@@ -29,4 +29,20 @@
   <label for="username">Username </label>
   <input type="text" class="form-control" id="username" aria-describedby="usernameHelp" appInputformater>
   <small id="usernameHelp" class="form-text text-muted">We'll never share your username with anyone else.</small>
+</div> -->
+
+<div class="card" style="width:70rem;">
+  <div class="card-body">
+    <h5 class="card-title">{{productItem.name | uppercase}}</h5>
+    <p class="card-text">Product Desc : {{productItem.desc | lowercase }}</p>
+      <p class="card-text">Product Id : {{productItem.id | number}}</p>
+      <p class="card-text">Product Rating : {{productItem.rating | number:'1.1-2'}}</p>
+      <p class="card-text">Product Price : {{productItem.price | currency:'CAD'}}</p>
+      <p class="card-text">Product Created At : {{productItem.createdAt| date : 'shortDate'}}</p>
+      <p class="card-text">Product Created At : {{productItem.createdAt| date : 'longDate'}}</p>
+      <p class="card-text">Product Created At : {{productItem.createdAt| date : 'MM/dd/yyyy'}}</p>
+      <p class="card-text">Product Created At : {{productItem.createdAt| date : 'MM/dd/yyyy : HH:mm:ss'}}</p>
+      <p>{{productItem | json }}</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
 </div>
