@@ -1,0 +1,33 @@
+ 
+  <h3>Product details</h3>
+  <table class="table" >
+    <thead class="thead-light">
+      <tr>
+        <th scope="col">#  Id</th>
+        <th scope="col">Name</th>
+        <th scope="col">Price</th>
+        <th scope="col">Description</th>
+        <th scope="col">Brand</th>
+      </tr>
+    </thead>
+    <tbody *ngIf="(products.length > 0) then table else empty_table">
+      
+    </tbody>
+  </table>
+
+  <ng-template #table >
+    <tr *ngFor="let p of products">
+        <th scope="row">{{p.id}}</th>
+        <td>{{p.name}}</td>
+        <td>{{p.price}}</td>
+        <td>{{p.desc}}</td>
+        <td>{{p.brand}}</td>
+      </tr>
+  </ng-template>
+  <ng-template #empty_table>
+    <div class="d-flex justify-content-center">
+        <div class="spinner-border text-primary m-3" role="status">
+          <span class="sr-only">Loading...</span>
+        </div>
+      </div>
+  </ng-template>

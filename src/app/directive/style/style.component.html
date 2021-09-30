@@ -1,0 +1,14 @@
+<div class="container">
+
+    <p [ngStyle]="{'color':'brown', 'font-size':'20px'}">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim explicabo, soluta aut esse eum ex perferendis deserunt incidunt. Laborum numquam perferendis, sapiente eligendi deleniti cumque adipisci ex perspiciatis non saepe.</p>
+    
+    <p [ngStyle]="{'color':customStyle.color, 'font-size':customStyle.fontsize ,
+    'background-color':customStyle.backgroundcolor, 'border':customStyle.border
+    }">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim explicabo, soluta aut esse eum ex perferendis deserunt incidunt. Laborum numquam perferendis, sapiente eligendi deleniti cumque adipisci ex perspiciatis non saepe.</p>
+    
+
+    <button [style.backgroundColor] ="canSave ? 'blue' : 'grey'" 
+    [style.color] ="canSave ? 'white' : 'black'"
+    [style.fontWeight] ="canSave ? 'bold' : 'normal'"
+    >Save</button>
+</div>

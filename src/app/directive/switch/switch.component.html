@@ -1,0 +1,30 @@
+<ul class="nav nav-pills">
+    <li class="nav-item">
+      <a class="nav-link active" (click)="viewMode='default'">Default View</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" (click)="viewMode='map'">Map View</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" (click)="viewMode='list'">List View</a>
+    </li>
+  </ul>
+
+  <div [ngSwitch]="viewMode" >
+    <div *ngSwitchCase="'map'">
+        <div class="alert alert-primary" role="alert">
+            Map View Content Here !
+        </div>
+    </div>
+    <div *ngSwitchCase="'list'">
+        <div class="alert alert-warning" role="alert">
+            List View Content Here !
+        </div>
+    </div>
+    <div *ngSwitchDefault>
+
+        <div class="alert alert-success" role="alert">
+            Default View Content Here !
+        </div>
+    </div>
+  </div>

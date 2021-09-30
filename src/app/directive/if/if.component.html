@@ -1,0 +1,36 @@
+<!-- if condition -->
+<div *ngIf="isActive" class="alert alert-success" role="alert">
+    User is active !
+  </div>
+
+  <div *ngIf="!isActive" class="alert alert-danger" role="alert">
+    Use is not active !
+  </div>
+
+  <!-- if else  -->
+  <div *ngIf="status; else other_content" class="alert alert-success" role="alert">
+    User status is active !
+  </div>
+
+  <ng-template #other_content>
+    <div class="alert alert-danger" role="alert">
+      Use status is not active !
+    </div>
+  </ng-template>
+
+ <!-- if then else  -->
+  <div *ngIf="status; then then_content else else_content" ></div>
+
+  <ng-template #then_content>
+    <div class="alert alert-info" role="alert">
+      User status is active !!
+    </div>
+  </ng-template>
+  <ng-template #else_content>
+    <div class="alert alert-warning" role="alert">
+      Use status is not active !!
+    </div>
+  </ng-template>
+ 
+
+  <button type="button" class="btn btn-info" (click)="onStatusChange()">Change Status</button>

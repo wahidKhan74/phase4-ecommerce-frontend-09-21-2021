@@ -1,0 +1,25 @@
+<div class="container">
+    <p [ngClass]="'bgOne'">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus possimus tempore iste veritatis minima sint eaque distinctio pariatur vel quasi, accusamus magni optio ut. Quis iste ad vel nesciunt laborum?
+    </p>
+</div>
+
+
+<div class="container">
+    <p [ngClass]="['bgTwo','mpTwo']">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus possimus tempore iste veritatis minima sint eaque distinctio pariatur vel quasi, accusamus magni optio ut. Quis iste ad vel nesciunt laborum?
+    </p>
+</div>
+
+<div class="container">
+    <p [ngClass]="{'bgThree':true,'mpThree':true}">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus possimus tempore iste veritatis minima sint eaque distinctio pariatur vel quasi, accusamus magni optio ut. Quis iste ad vel nesciunt laborum?
+    </p>
+</div>
+
+
+<div class="container">
+    <p [ngClass]=" status ? 'bgThree' : 'bgOne'">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus possimus tempore iste veritatis minima sint eaque distinctio pariatur vel quasi, accusamus magni optio ut. Quis iste ad vel nesciunt laborum?
+    </p>
+</div>

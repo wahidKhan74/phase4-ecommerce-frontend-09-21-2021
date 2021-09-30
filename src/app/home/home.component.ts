@@ -8,6 +8,7 @@ import { DataService } from '../service/data.service';
 })
 export class HomeComponent implements OnInit {
 
+
   product:any;
 
   constructor(public dataService:DataService) {
@@ -16,5 +17,8 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+
+
 
 }

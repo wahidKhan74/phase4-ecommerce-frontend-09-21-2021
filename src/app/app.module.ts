@@ -25,6 +25,12 @@ import { ReactiveFormComponent } from './forms/reactive-form/reactive-form.compo
 import { DataService } from './service/data.service';
 import { HttpClientModule } from '@angular/common/http';
 import { ApiService } from './service/api.service';
+import { IfComponent } from './directive/if/if.component';
+import { ForComponent } from './directive/for/for.component';
+import { SwitchComponent } from './directive/switch/switch.component';
+import { StyleComponent } from './directive/style/style.component';
+import { ClassComponent } from './directive/class/class.component';
+import { InputformaterDirective } from './directive/inputformater.directive';
 
 @NgModule({
   declarations: [
@@ -46,7 +52,13 @@ import { ApiService } from './service/api.service';
     StyleBindingComponent,
     EventBindingComponent,
     TemplateFormComponent,
-    ReactiveFormComponent
+    ReactiveFormComponent,
+    IfComponent,
+    ForComponent,
+    SwitchComponent,
+    StyleComponent,
+    ClassComponent,
+    InputformaterDirective
   ],
   imports: [
     BrowserModule,
